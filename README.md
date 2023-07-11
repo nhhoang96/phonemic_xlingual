@@ -3,6 +3,7 @@ This repository provides PyTorch implementation for the paper [*Enhancing Cross-
 
 ## Requirements
 Follow [XTREME benchmark](https://github.com/google-research/xtreme) requirements. Additional specific details of requriements are as follows:
+
 python 3.9.12 <br />
 numpy 1.22.3 <br />
 pytorch 1.12.1 <br />
@@ -46,7 +47,6 @@ Experiments are conducted on token-level NER and POS tasks for 2 language groups
 Please refer to the manuscript regarding the detailed rationale of the experiment design.
 ```
 bash run_${task}.sh ${backbone} ${source_lang} ${target_lang}
-```
 ```
 
 where passing arguments ${.} are defined as follows: 
