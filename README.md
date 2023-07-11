@@ -17,6 +17,8 @@ tensorboardx 2.2 <br />
 
 ## Dataset
 We generate and conduct evaluation on orthographic-phonemic alignment dataset for CJKV languages on Part-of-Speech (POS) and Named Entity Recognition (NER) tasks. The datasets are extracted from [XTREME benchmark](https://github.com/google-research/xtreme). Please take a look at our paper for details of the preprocessing steps.
+
+**NOTE:** For consistency purposes, for NER tasks, labels are generated on character levels across all 4 languages. 
  
 ## Configuration
 Adjust configurations in ./scripts/run_ner.sh (for NER tasks) and ./scripts/run_pos.sh (for POS tasks)
@@ -50,7 +52,7 @@ bash run_${task}.sh ${backbone} ${source_lang} ${target_lang}
 ```
 
 where passing arguments ${.} are defined as follows: 
-* ```task``: Evaluation task (i.e. ner, pos)
+* ```task```: Evaluation task (i.e. ner, pos)
 * ```backbone```: Backbone PLMs (i.e. mbert, xlmr)
 * ```source_lang```: Source languge used for training (i.e. zh in zh->vi or ja in ja->ko)
 * ```target_lang```: Target language used for evaluation/ testing (i.e. vi in zh->vi or ko in ja->ko)
