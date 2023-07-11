@@ -60,7 +60,6 @@ from transformers import (
 	XLMRobertaForTokenClassification,
 	XLMRobertaForMaskedLM
 )
-from xlm import XLMForTokenClassification
 
 
 logger = logging.getLogger(__name__)
@@ -73,7 +72,6 @@ ALL_MODELS = sum(
 
 MODEL_CLASSES = {
 	"bert": (BertConfig, BertForTokenClassification, BertTokenizer, BertForMaskedLM),
-	"xlm": (XLMConfig, XLMForTokenClassification, XLMTokenizer),
 	"xlmr": (XLMRobertaConfig, XLMRobertaForTokenClassification, XLMRobertaTokenizer, XLMRobertaForMaskedLM),
 }
 
